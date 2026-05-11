@@ -1,0 +1,179 @@
+:root {
+  --bg: #f5f8ff;
+  --card: #ffffff;
+  --accent: #4c79ff;
+  --text: #2a2a2a;
+  --secondary: #555555;
+  --shadow: rgba(76, 121, 255, 0.18);
+}
+
+/* 全体のリセットとフォント */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #eef4ff 0%, #fdfcff 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ヒーローセクション */
+.hero {
+  padding: 80px 20px 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #6a9cff 0%, #aac8ff 100%);
+  color: white;
+}
+
+.hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.hero-text {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* セクション見出し */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+/* 特徴カード */
+.feature-list {
+  display: grid;
+  gap: 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.feature-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(40, 65, 115, 0.08);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.feature-card p {
+  line-height: 1.75;
+  color: var(--secondary);
+}
+
+/* 学びのイメージカード */
+.card-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 1040px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.study-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 16px 36px rgba(64, 93, 163, 0.08);
+  text-align: center;
+}
+
+.card-icon {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+}
+
+.study-card h3 {
+  margin: 0 0 14px;
+  color: var(--text);
+}
+
+.study-card p {
+  margin: 0;
+  color: var(--secondary);
+  line-height: 1.7;
+}
+
+/* フッターCTA */
+.call-to-action {
+  background: #ffffff;
+  padding: 60px 20px 80px;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  margin-bottom: 18px;
+}
+
+.call-to-action p {
+  max-width: 720px;
+  margin: 0 auto 28px;
+  color: var(--secondary);
+  line-height: 1.8;
+}
+
+button {
+  border: none;
+  background: var(--accent);
+  color: white;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px rgba(76, 121, 255, 0.2);
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 640px) {
+  .hero {
+    padding: 60px 16px 40px;
+  }
+
+  section {
+    padding: 48px 16px;
+  }
+
+  .feature-card,
+  .study-card {
+    padding: 20px;
+  }
+}
